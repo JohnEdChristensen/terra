@@ -1,0 +1,12 @@
+cargo-features = ["codegen-backend"]
+[package]
+name = "terra"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+iced = { version = "0.13.1", features = ["canvas", "debug", "advanced"] }
+
+[profile.dev]
+debug = 0
+codegen-backend = "cranelift"
